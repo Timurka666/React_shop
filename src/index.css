@@ -38,8 +38,16 @@ footer {
   cursor: pointer;
   z-index: 5;
   background-color: blue;
-  width: 50px;
-  height: 50px;
+  min-width: 57px;
+  min-height: 57px;
+  border-radius: 10px;
+  padding: 0.3rem 0 0 0.3rem;
+}
+
+.basket-quantity {
+  position: relative;
+  top: 1rem;
+  left: 0.2rem;
 }
 
 @media (min-width: 767px) {
@@ -51,4 +59,18 @@ footer {
 
 .preloader {
   width: 100%;
+}
+
+.basket-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  width: 50rem;
+  max-width: 95%;
+}
+
+.basket-list button {
+  border-width: 0px;
 }
