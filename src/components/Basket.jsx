@@ -1,5 +1,10 @@
-export default function Basket(props) {
-    const {quantity = 0, handleBasketShow = Function.prototype} = props;
+import { useContext } from "react";
+import { ShopContext } from "../context";
+
+export default function Basket() {
+    const {order, handleBasketShow = Function.prototype} = useContext(ShopContext);
+
+    const quantity = order.length;
 
     return <div className="basket text-white" onClick={handleBasketShow}>
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-basket" viewBox="0 0 16 16">
