@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { ShopContext } from "../context";
+
 export default function BasketItem(props) {
     const {id,
         name,
